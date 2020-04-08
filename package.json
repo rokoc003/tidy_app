@@ -1,6 +1,7 @@
 {
-  "name": "tidy_app",
+  "PROJECT-client": "tidy_app",
   "version": "1.0.0",
+  "private": true,
   "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
   "main": "index.js",
   "scripts": {
@@ -18,7 +19,7 @@
     "url": "git+https://github.com/rokoc003/tidy_app.git"
   },
   "author": "Roxane Kocem",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/rokoc003/tidy_app/issues"
   },
