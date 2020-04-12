@@ -7,4 +7,18 @@ export default {
   component: Button,
 };
 
-export const Text = () => <Button onClick={action('clicked')}>Log In</Button>;
+export const LoginButton = () => (
+  <Button onClick={action('clicked')}>Login</Button>
+);
+export const SignupButton = () => (
+  <Button onClick={action('clicked')}>Sign up</Button>
+);
+export const SubmitButton = () => (
+  <Button onClick={action('clicked')}>Submit</Button>
+);
+export const CreateTaskButton = () => (
+  <Button onClick={action('clicked')}>Create Task</Button>
+);
+export const SaveButton = () => (
+  <Button onClick={action('clicked')}>Save</Button>
+);
