@@ -1,14 +1,13 @@
 import styled from '@emotion/styled';
 
 const Input = styled.input`
+  display: flex;
+  justify-content: center;
   padding: 2px 8px;
-  color: /* #f7efba */ #a3a3a3;
-  width: 200px;
-  height: 20px;
-  background-color: #e2e2e2;
+  color: #bc325b;
+  height: 25px;
   border: none;
-  border-radius: 5px;
-  font-size: 18px;
+  font-size: 1.2rem;
   &:focus {
     outline: none;
   }
