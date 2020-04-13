@@ -5,7 +5,6 @@ const Input = styled.input`
   justify-content: center;
   padding: 2px 8px;
   color: #bc325b;
-  height: 25px;
   border: none;
   font-size: 1.2rem;
   &:focus {

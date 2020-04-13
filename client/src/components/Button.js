@@ -7,7 +7,7 @@ const Button = styled.button`
   border-radius: 10px;
   box-shadow: 2px 4px 7px #aaaaaa;
   border: none;
-  font-size: 14px;
+  font-size: 1.1rem;
   padding: 8px 20px;
   &:focus {
     outline: none;
