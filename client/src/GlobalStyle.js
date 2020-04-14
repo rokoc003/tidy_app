@@ -1,5 +1,6 @@
 import React from 'react';
 import { Global, css } from '@emotion/core';
+import colors from '../src/utils/colors';
 
 function GlobalStyle() {
   return (
@@ -14,7 +15,7 @@ function GlobalStyle() {
           font-size: 16px;
           margin: 0;
           font-family: 'Ubuntu', sans-serif;
-          background-color: #fffffc;
+          background-color: ${colors.pageBackground};
         }
       `}
     />

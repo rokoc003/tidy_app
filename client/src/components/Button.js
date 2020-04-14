@@ -1,11 +1,12 @@
 import styled from '@emotion/styled';
+import colors from '../utils/colors';
 
 const Button = styled.button`
-  background-image: linear-gradient(#fb8777, #ef1846);
+  background-image: ${colors.buttonBackground};
   cursor: pointer;
-  color: #f7efba;
+  color: ${colors.buttonFont};
   border-radius: 10px;
-  box-shadow: 2px 4px 7px #aaaaaa;
+  box-shadow: 2px 4px 7px ${colors.boxShadow};
   border: none;
   font-size: 1.1rem;
   padding: 8px 20px;
