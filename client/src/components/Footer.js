@@ -1,8 +1,6 @@
 import React from 'react';
 import styled from '@emotion/styled';
-import HomeIcon from '../assets/icons/Icon-home.svg';
-import ListIcon from '../assets/icons/Icon-list.svg';
-import CreateIcon from '../assets/icons/Icon-plus-circle.svg';
+import PropTypes from 'prop-types';
 
 const FooterContainer = styled.div`
   display: flex;
@@ -10,7 +8,7 @@ const FooterContainer = styled.div`
   width: 100%;
 `;
 
-const FooterIcon = styled.input`
+const FooterIcon = styled.button`
   cursor: pointer;
   border: none;
   &:focus {
@@ -18,24 +16,18 @@ const FooterIcon = styled.input`
   }
 `;
 
-export const Footer = () => (
-  <FooterContainer>
-    <FooterIcon
-      type="image"
-      src={ListIcon}
-      alt="icon which represents a clipboard"
-    />
-    <FooterIcon
-      type="image"
-      src={HomeIcon}
-      alt="icon which represents a house"
-    />
-    <FooterIcon
-      type="image"
-      src={CreateIcon}
-      alt="icon which represents a plus sign"
-    />
-  </FooterContainer>
-);
+function Footer({ links }) {
+  return (
+    <FooterContainer>
+      {links.map((link) => (
+        <FooterIcon key={link.Label}>{link.icon}</FooterIcon>
+      ))}
+    </FooterContainer>
+  );
+}
+
+Footer.propTypes = {
+  links: PropTypes.array,
+};
 
 export default Footer;
