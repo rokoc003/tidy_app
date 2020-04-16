@@ -1,18 +1,38 @@
 import React from 'react';
 import styled from '@emotion/styled';
+import PropTypes from 'prop-types';
 
 const SVG = styled.svg`
-  border: #ef1846;
+  stroke: #ef1846;
+  fill: ${(props) => (props.active ? 'url(#linear-gradient)' : '#fffffc')};
+  filter: url(#Icon_awesome-clipboard-list);
 `;
 
-function List() {
+function List({ active }) {
   return (
     <SVG
       xmlns="http://www.w3.org/2000/svg"
-      width="27"
-      height="36"
-      viewBox="0 0 27 36"
+      width="32"
+      height="38"
+      viewBox="-3 0 35 38"
+      active={active}
     >
+      <defs>
+        <filter
+          id="Icon_awesome-clipboard-list"
+          x="0"
+          y="0"
+          width="53.967"
+          height="60.771"
+          filterUnits="userSpaceOnUse"
+        >
+          <feOffset dy="3" input="SourceAlpha" />
+          <feGaussianBlur stdDeviation="3" result="blur" />
+          <feFlood floodOpacity="0.161" />
+          <feComposite operator="in" in2="blur" />
+          <feComposite in="SourceGraphic" />
+        </filter>
+      </defs>
       <path
         id="Icon_awesome-clipboard-list"
         data-name="Icon awesome-clipboard-list"
@@ -21,5 +41,9 @@ function List() {
     </SVG>
   );
 }
+
+List.propTypes = {
+  active: PropTypes.bool,
+};
 
 export default List;

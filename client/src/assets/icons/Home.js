@@ -1,18 +1,48 @@
 import React from 'react';
 import styled from '@emotion/styled';
+import PropTypes from 'prop-types';
 
 const SVG = styled.svg`
-  border: #ef1846;
+  stroke: #ef1846;
+  fill: ${(props) => (props.active ? 'url(#linear-gradient)' : '#fffffc')};
+  filter: url(#Icon_awesome-home);
 `;
 
-function Home() {
+function Home({ active }) {
   return (
     <SVG
       xmlns="http://www.w3.org/2000/svg"
-      width="40.503"
+      width="40"
       height="31.496"
-      viewBox="0 0 40.503 31.496"
+      viewBox="-1 0 42 31.496"
+      active={active}
     >
+      <defs>
+        <linearGradient
+          id="linear-gradient"
+          x1="0.5"
+          x2="0.5"
+          y2="1"
+          gradientUnits="objectBoundingBox"
+        >
+          <stop offset="0" stopColor="#fb8777" />
+          <stop offset="1" stopColor="#ef1846" />
+        </linearGradient>
+        <filter
+          id="Icon_awesome-home"
+          x="0"
+          y="0"
+          width="66.534"
+          height="56.9"
+          filterUnits="userSpaceOnUse"
+        >
+          <feOffset dy="3" input="SourceAlpha" />
+          <feGaussianBlur stdDeviation="3" result="blur" />
+          <feFlood floodOpacity="0.161" />
+          <feComposite operator="in" in2="blur" />
+          <feComposite in="SourceGraphic" />
+        </filter>
+      </defs>
       <path
         id="Icon_awesome-home"
         data-name="Icon awesome-home"
@@ -22,5 +52,9 @@ function Home() {
     </SVG>
   );
 }
+
+Home.propTypes = {
+  active: PropTypes.bool,
+};
 
 export default Home;
