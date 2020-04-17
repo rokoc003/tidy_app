@@ -17,6 +17,7 @@ function Home({ active }) {
       viewBox="-1 0 42 31.496"
       active={active}
     >
+      <title>Home icon</title>
       <defs>
         <linearGradient
           id="linear-gradient"

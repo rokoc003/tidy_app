@@ -17,6 +17,7 @@ function List({ active }) {
       viewBox="-3 0 35 38"
       active={active}
     >
+      <title>Icon which represents a checklist</title>
       <defs>
         <filter
           id="Icon_awesome-clipboard-list"

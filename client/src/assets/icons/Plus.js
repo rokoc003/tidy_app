@@ -17,6 +17,7 @@ function Plus({ active }) {
       viewBox="-1 0 37 34.875"
       active={active}
     >
+      <title>Plus icon</title>
       <defs>
         <linearGradient
           id="linear-gradient"
