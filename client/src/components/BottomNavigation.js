@@ -2,14 +2,14 @@ import React from 'react';
 import styled from '@emotion/styled';
 import PropTypes from 'prop-types';
 
-const FooterContainer = styled.div`
+const Container = styled.div`
   display: flex;
   justify-content: center;
   width: 100%;
   height: 50px;
 `;
 
-const FooterIcon = styled.button`
+const NavigationItem = styled.button`
   display: flex;
   justify-content: center;
   min-width: 100px;
@@ -20,26 +20,26 @@ const FooterIcon = styled.button`
   }
 `;
 
-function Footer({ links, isActive, onItemClick }) {
+function BottomNavigation({ links, isActive, onItemClick }) {
   return (
-    <FooterContainer>
+    <Container>
       {links.map((link) => (
-        <FooterIcon
+        <NavigationItem
           key={link.label}
           active={isActive === link.label}
           onClick={() => onItemClick(link.label)}
         >
           <link.Icon active={isActive === link.label} />
-        </FooterIcon>
+        </NavigationItem>
       ))}
-    </FooterContainer>
+    </Container>
   );
 }
 
-Footer.propTypes = {
+BottomNavigation.propTypes = {
   links: PropTypes.array,
   isActive: PropTypes.string,
   onItemClick: PropTypes.func,
 };
 
-export default Footer;
+export default BottomNavigation;
