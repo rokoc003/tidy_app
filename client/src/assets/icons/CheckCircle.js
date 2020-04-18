@@ -1,19 +1,21 @@
 import React from 'react';
 import styled from '@emotion/styled';
+import PropTypes from 'prop-types';
 
 const SVG = styled.svg`
   stroke: #ef1846;
   fill: ${(props) => (props.active ? 'url(#linear-gradient)' : '#fffffc')};
-  filter: url(#Icon_awesome-home);
+  filter: url(#Icon_material-check-circle);
 `;
 
-function CheckCircle() {
+function CheckCircle({ active }) {
   return (
     <SVG
       xmlns="http://www.w3.org/2000/svg"
       width="35.484"
       height="35.65"
-      viewBox="0 0 35.484 35.65"
+      viewBox="0 0 35.484 30.65"
+      active={active}
     >
       <defs>
         <linearGradient
@@ -50,5 +52,9 @@ function CheckCircle() {
     </SVG>
   );
 }
+
+CheckCircle.propTypes = {
+  active: PropTypes.bool,
+};
 
 export default CheckCircle;
