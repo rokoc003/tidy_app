@@ -9,7 +9,8 @@ const Container = styled.div`
 `;
 
 const Title = styled.h1`
-  font-size: 2rem;
+  font: italic 400 2rem 'Ubuntu';
+  letter-spacing: 2px;
   color: #bc325b;
   margin: 0.8rem;
 `;
