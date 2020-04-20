@@ -1,15 +1,20 @@
 import React from 'react';
 import { action } from '@storybook/addon-actions';
 import Button from '../components/Button';
+import ButtonContainer from '../components/ButtonContainer';
 
 export default {
   title: 'Button',
   component: Button,
 };
 
-export const LoginButton = () => (
-  <Button onClick={action('clicked')}>Login</Button>
-);
+export const LoginButton = () => {
+  return (
+    <ButtonContainer>
+      <Button onClick={action('clicked')}>Login</Button>
+    </ButtonContainer>
+  );
+};
 export const SignupButton = () => (
   <Button onClick={action('clicked')}>Sign up</Button>
 );
