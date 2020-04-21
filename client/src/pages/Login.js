@@ -24,9 +24,11 @@ function Login() {
         <InputCircle placeholder="Password" type="password" />
       </InputContainer>
       <textarea>New to tidyApp? </textarea>
-      <Link to="/signup">
-        <span>Sign up now.</span>
-      </Link>
+
+      <span>
+        <Link to="/signup">Sign up now.</Link>
+      </span>
+
       <ButtonContainer>
         <Button>Login</Button>
       </ButtonContainer>
