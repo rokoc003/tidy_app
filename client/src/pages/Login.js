@@ -7,6 +7,7 @@ import Button from '../components/Button';
 import ButtonContainer from '../components/ButtonContainer';
 import InputCircle from '../components/InputCircle';
 import InputContainer from '../components/InputContainer';
+import { Link } from 'react-router-dom';
 
 const IMG = styled.img`
   max-width: 350px;
@@ -22,7 +23,10 @@ function Login() {
         <InputCircle placeholder="Email" type="email" />
         <InputCircle placeholder="Password" type="password" />
       </InputContainer>
-      <textarea>New to tidyApp? Sign up now.</textarea>
+      <textarea>New to tidyApp? </textarea>
+      <Link to="/signup">
+        <span>Sign up now.</span>
+      </Link>
       <ButtonContainer>
         <Button>Login</Button>
       </ButtonContainer>
