@@ -23,7 +23,7 @@ function Login() {
         <InputCircle placeholder="Email" type="email" />
         <InputCircle placeholder="Password" type="password" />
       </InputContainer>
-      <span>New to tidyApp? </span>
+      <span>New to tidyApp?</span>
       <span>
         <Link to="/signup">Sign up now.</Link>
       </span>
