@@ -7,6 +7,7 @@ const colors = {
   inputFont: '#bc325b',
   inputLine: '#e2e2e2',
   boxShadow: '#aaaaaa',
+  captionFont: '#fb8777',
 };
 
 export default colors;
