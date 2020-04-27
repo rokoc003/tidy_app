@@ -28,7 +28,9 @@ function Login() {
         <Link to="/signup">Sign up now.</Link>
       </span>
       <ButtonContainer>
-        <Button>Login</Button>
+        <Link to="/household">
+          <Button>Login</Button>
+        </Link>
       </ButtonContainer>
     </PageContainer>
   );
