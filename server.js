@@ -1,12 +1,18 @@
-const express = require('express');
 const path = require('path');
+const jsonServer = require('json-server');
+const server = jsonServer.create();
+const router = jsonServer.router('db.json');
+const middlewares = jsonServer.defaults({
+  static: path.join(__dirname, 'client/build'),
+});
 
 const port = process.env.PORT || 8080;
-const app = express();
-app.use(express.static(path.join(__dirname, 'client/build')));
-app.get('*', (request, response) => {
-  response.sendFile(path.join(__dirname, 'client/build/index.html'));
+
+server.use(middlewares);
+server.use('/api', router);
+server.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, 'client/build', 'index.html'));
 });
-app.listen(port, () => {
-  console.log(`Server is running http://localhost:${port}`);
+server.listen(port, () => {
+  console.log(`Server is running on http://localhost:${port}`);
 });
