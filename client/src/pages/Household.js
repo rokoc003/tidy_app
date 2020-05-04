@@ -57,15 +57,15 @@ function Household() {
     setMember('');
   };
 
-  const handleDeleteRoom = (id) => {
+  const handleDeleteRoom = (index) => {
     const newRooms = [...rooms];
-    newRooms.splice(id, 1);
+    newRooms.splice(index, 1);
     setRooms(newRooms);
   };
 
-  const handleDeleteMember = (id) => {
+  const handleDeleteMember = (index) => {
     const newMembers = [...members];
-    newMembers.splice(id, 1);
+    newMembers.splice(index, 1);
     setMembers(newMembers);
   };
 
@@ -91,15 +91,15 @@ function Household() {
             placeholder="Add room"
           />
         </Form>
-        {rooms.map((room) => (
+        {rooms.map((room, index) => (
           <>
-            <span key={room.id} room={room}>
+            <span key={index} room={room}>
               {room}
             </span>
             <DeleteButton
               src={DeleteIcon}
               onClick={() => {
-                handleDeleteRoom();
+                handleDeleteRoom(index);
               }}
             />
           </>
@@ -114,15 +114,15 @@ function Household() {
             placeholder="Add name"
           />
         </Form>
-        {members.map((member) => (
+        {members.map((member, index) => (
           <>
-            <span key={member.id} member={member}>
+            <span key={index} member={member}>
               {member}
             </span>
             <DeleteButton
               src={DeleteIcon}
               onClick={() => {
-                handleDeleteMember();
+                handleDeleteMember(index);
               }}
             />
           </>
@@ -144,5 +144,6 @@ function Household() {
 Household.propTypes = {
   onChange: PropTypes.func,
   value: PropTypes.string,
+  onClick: PropTypes.func,
 };
 export default Household;
