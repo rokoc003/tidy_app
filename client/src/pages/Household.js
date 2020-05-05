@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import PropTypes from 'prop-types';
 import { createHousehold } from '../api/household';
 import DeleteIcon from '../assets/icons/Icon-trash.svg';
 import InputCircle from '../components/InputCircle';
@@ -141,9 +140,4 @@ function Household() {
   );
 }
 
-Household.propTypes = {
-  onChange: PropTypes.func,
-  value: PropTypes.string,
-  onClick: PropTypes.func,
-};
 export default Household;
