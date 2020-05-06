@@ -33,13 +33,13 @@ function Household() {
   const [room, setRoom] = useState('');
 
   function addToRoomList(newRoom) {
-    const newItem = [...rooms, newRoom];
-    setRooms(newItem);
+    const newRooms = [...rooms, newRoom];
+    setRooms(newRooms);
   }
 
   function addToMemberList(newMember) {
-    const newItem = [...members, newMember];
-    setMembers(newItem);
+    const newMembers = [...members, newMember];
+    setMembers(newMembers);
   }
 
   const handleSubmitRoom = (event) => {
