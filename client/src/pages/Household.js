@@ -56,15 +56,15 @@ function Household() {
     setMember('');
   };
 
-  const handleDeleteRoom = (index) => {
+  const handleDeleteRoom = (room) => {
     const newRooms = [...rooms];
-    newRooms.splice(index, 1);
+    newRooms.splice(newRooms.indexOf(room), 1);
     setRooms(newRooms);
   };
 
-  const handleDeleteMember = (index) => {
+  const handleDeleteMember = (member) => {
     const newMembers = [...members];
-    newMembers.splice(index, 1);
+    newMembers.splice(newMembers.indexOf(member), 1);
     setMembers(newMembers);
   };
 
@@ -90,18 +90,16 @@ function Household() {
             placeholder="Add room"
           />
         </Form>
-        {rooms.map((room, index) => (
-          <>
-            <span key={index} room={room}>
-              {room}
-            </span>
+        {rooms.map((room) => (
+          <React.Fragment key={room}>
+            <span>{room}</span>
             <DeleteButton
               src={DeleteIcon}
               onClick={() => {
                 handleDeleteRoom(room);
               }}
             />
-          </>
+          </React.Fragment>
         ))}
       </InputContainer>
       <InputContainer>
@@ -113,18 +111,16 @@ function Household() {
             placeholder="Add name"
           />
         </Form>
-        {members.map((member, index) => (
-          <>
-            <span key={index} member={member}>
-              {member}
-            </span>
+        {members.map((member) => (
+          <React.Fragment key={member}>
+            <span>{member}</span>
             <DeleteButton
               src={DeleteIcon}
               onClick={() => {
-                handleDeleteMember(index);
+                handleDeleteMember(member);
               }}
             />
-          </>
+          </React.Fragment>
         ))}
       </InputContainer>
       <ButtonContainer>
