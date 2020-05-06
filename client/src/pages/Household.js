@@ -98,7 +98,7 @@ function Household() {
             <DeleteButton
               src={DeleteIcon}
               onClick={() => {
-                handleDeleteRoom(index);
+                handleDeleteRoom(room);
               }}
             />
           </>
