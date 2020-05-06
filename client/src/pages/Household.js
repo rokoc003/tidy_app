@@ -12,18 +12,9 @@ import ButtonContainer from '../components/ButtonContainer';
 import Form from '../components/Form';
 import Wrapper from '../components/Wrapper';
 import PageContainer from '../components/PageContainer';
-import styled from '@emotion/styled';
-
-const DeleteButton = styled.img`
-  display: flex;
-  justify-content: center;
-  width: 20px;
-  cursor: pointer;
-  border: none;
-  &:focus {
-    outline: none;
-  }
-`;
+import DeleteButton from '../components/DeleteButton';
+import ListItem from '../components/ListItem';
+import ListWrapper from '../components/ListWrapper';
 
 function Household() {
   const [name, setName] = useState('');
@@ -91,15 +82,15 @@ function Household() {
           />
         </Form>
         {rooms.map((room) => (
-          <React.Fragment key={room}>
-            <span>{room}</span>
+          <ListWrapper key={room}>
+            <ListItem>{room}</ListItem>
             <DeleteButton
               src={DeleteIcon}
               onClick={() => {
                 handleDeleteRoom(room);
               }}
             />
-          </React.Fragment>
+          </ListWrapper>
         ))}
       </InputContainer>
       <InputContainer>
@@ -112,15 +103,15 @@ function Household() {
           />
         </Form>
         {members.map((member) => (
-          <React.Fragment key={member}>
-            <span>{member}</span>
+          <ListWrapper key={member}>
+            <ListItem>{member}</ListItem>
             <DeleteButton
               src={DeleteIcon}
               onClick={() => {
                 handleDeleteMember(member);
               }}
             />
-          </React.Fragment>
+          </ListWrapper>
         ))}
       </InputContainer>
       <ButtonContainer>
