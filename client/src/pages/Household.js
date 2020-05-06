@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { createHousehold } from '../api/household';
+import { Link } from 'react-router-dom';
 import DeleteIcon from '../assets/icons/Icon-trash.svg';
 import InputCircle from '../components/InputCircle';
 import InputLine from '../components/InputLine';
@@ -115,13 +116,15 @@ function Household() {
         ))}
       </InputContainer>
       <ButtonContainer>
-        <Button
-          onClick={() => {
-            createHousehold({ name, rooms, members });
-          }}
-        >
-          Submit
-        </Button>
+        <Link to="/home">
+          <Button
+            onClick={() => {
+              createHousehold({ name, rooms, members });
+            }}
+          >
+            Submit
+          </Button>
+        </Link>
       </ButtonContainer>
     </PageContainer>
   );
