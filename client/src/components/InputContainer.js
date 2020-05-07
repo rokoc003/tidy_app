@@ -3,9 +3,8 @@ import styled from '@emotion/styled';
 const InputContainer = styled.div`
   display: flex;
   flex-direction: column;
-  align-items: center;
+  margin: 10px 0px;
   flex-basis: 100%;
-  width: 80%;
 `;
 
 export default InputContainer;
