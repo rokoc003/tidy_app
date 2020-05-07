@@ -1,0 +1,34 @@
+{
+  "households": [
+    {
+      "id": 1,
+      "name": "FreakyDevs",
+      "rooms": ["bathroom", "living room"],
+      "members": ["Jane", "John", "Tim"]
+    },
+    {
+      "id": 2,
+      "name": "abc",
+      "rooms": ["living room"],
+      "members": ["John", "Tim"]
+    }
+  ],
+  "tasks": [
+    {
+      "id": 1,
+      "householdId": 1,
+      "member": "Jane",
+      "description": "Clean toilet",
+      "room": "bathroom",
+      "done": false
+    },
+    {
+      "id": 2,
+      "householdId": 1,
+      "member": "John",
+      "description": "vacuum floor",
+      "room": "living room",
+      "done": true
+    }
+  ]
+}

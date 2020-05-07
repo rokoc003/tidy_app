@@ -3,6 +3,8 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import GlobalStyle from './GlobalStyle';
 import Login from '../src/pages/Login';
 import Signup from '../src/pages/Signup';
+import Household from '../src/pages/Household';
+import Home from '../src/pages/Home';
 
 function App() {
   return (
@@ -14,6 +16,12 @@ function App() {
         </Route>
         <Route exact path="/signup">
           <Signup />
+        </Route>
+        <Route exact path="/household">
+          <Household />
+        </Route>
+        <Route exact path="/home">
+          <Home />
         </Route>
       </Switch>
     </Router>
