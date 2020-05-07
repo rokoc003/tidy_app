@@ -8,7 +8,7 @@ const Button = styled.button`
   border-radius: 10px;
   box-shadow: 2px 4px 7px ${colors.boxShadow};
   border: none;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   padding: 8px 20px;
   &:focus {
     outline: none;
