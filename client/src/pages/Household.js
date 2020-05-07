@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { createHousehold } from '../api/household';
 import { Link } from 'react-router-dom';
-import DeleteIcon from '../assets/icons/Icon-trash.svg';
+import { ReactComponent as DeleteButton } from '../assets/icons/Icon-trash.svg';
 import InputCircle from '../components/InputCircle';
 import InputLine from '../components/InputLine';
 import InputContainer from '../components/InputContainer';
@@ -13,8 +13,7 @@ import ButtonContainer from '../components/ButtonContainer';
 import Form from '../components/Form';
 import Wrapper from '../components/Wrapper';
 import PageContainer from '../components/PageContainer';
-import DeleteButton from '../components/DeleteButton';
-import ListItem from '../components/ListItem';
+import GeneratedInputContent from '../components/GeneratedInputContent';
 import ListWrapper from '../components/ListWrapper';
 
 function Household() {
@@ -84,13 +83,12 @@ function Household() {
         </Form>
         {rooms.map((room) => (
           <ListWrapper key={room}>
-            <ListItem>{room}</ListItem>
             <DeleteButton
-              src={DeleteIcon}
               onClick={() => {
                 handleDeleteRoom(room);
               }}
             />
+            <GeneratedInputContent>{room}</GeneratedInputContent>
           </ListWrapper>
         ))}
       </InputContainer>
@@ -105,13 +103,12 @@ function Household() {
         </Form>
         {members.map((member) => (
           <ListWrapper key={member}>
-            <ListItem>{member}</ListItem>
             <DeleteButton
-              src={DeleteIcon}
               onClick={() => {
                 handleDeleteMember(member);
               }}
             />
+            <GeneratedInputContent>{member}</GeneratedInputContent>
           </ListWrapper>
         ))}
       </InputContainer>
