@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from '@emotion/styled';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 
 const Container = styled.div`
   display: flex;
@@ -25,13 +26,15 @@ function BottomNavigation({ links, isActive, onItemClick }) {
   return (
     <Container>
       {links.map((link) => (
-        <NavigationItem
-          key={link.label}
-          active={isActive === link.label}
-          onClick={() => onItemClick(link.label)}
-        >
-          <link.Icon active={isActive === link.label} />
-        </NavigationItem>
+        <Link to={`/${link.id}`} key={link.id}>
+          <NavigationItem
+            id={link.id}
+            active={isActive === link.label}
+            onClick={() => onItemClick(link.label)}
+          >
+            <link.Icon active={isActive === link.label} />
+          </NavigationItem>
+        </Link>
       ))}
     </Container>
   );
