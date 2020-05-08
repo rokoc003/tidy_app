@@ -13,6 +13,7 @@ const NavigationItem = styled.button`
   display: flex;
   justify-content: center;
   min-width: 100px;
+  background: transparent;
   cursor: pointer;
   border: none;
   &:focus {

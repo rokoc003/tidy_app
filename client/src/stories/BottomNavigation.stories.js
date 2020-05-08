@@ -1,6 +1,6 @@
 import React from 'react';
 import BottomNavigation from '../components/BottomNavigation';
-import Home from '../assets/icons/Home';
+import House from '../assets/icons/House';
 import List from '../assets/icons/List';
 import Plus from '../assets/icons/Plus';
 import { action } from '@storybook/addon-actions';
@@ -15,7 +15,7 @@ export const Default = () => {
   return (
     <BottomNavigation
       links={[
-        { label: 'Home', Icon: Home },
+        { label: 'Home', Icon: House },
         { label: 'List', Icon: List },
         { label: 'Plus', Icon: Plus },
       ]}
