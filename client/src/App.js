@@ -6,6 +6,7 @@ import Signup from '../src/pages/Signup';
 import Household from '../src/pages/Household';
 import Home from '../src/pages/Home';
 import Housework from '../src/pages/Housework';
+import Overview from '../src/pages/Overview';
 
 function App() {
   return (
@@ -26,6 +27,9 @@ function App() {
         </Route>
         <Route exact path="/housework">
           <Housework />
+        </Route>
+        <Route exact path="/list">
+          <Overview />
         </Route>
       </Switch>
     </Router>
