@@ -7,6 +7,7 @@ const InputCircle = styled(Input)`
   height: 35px;
   background-color: ${colors.inputBackground};
   border-radius: 5px;
+  font: 400 1.2rem 'Ubuntu';
 `;
 
 export default InputCircle;

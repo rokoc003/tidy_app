@@ -7,6 +7,7 @@ const InputLine = styled(Input)`
   height: 25px;
   border-bottom: 2px solid ${colors.InputLine};
   margin-bottom: 15px;
+  font: 400 1.2rem 'Ubuntu';
 `;
 
 export default InputLine;
