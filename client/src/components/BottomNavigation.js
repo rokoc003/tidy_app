@@ -6,8 +6,11 @@ import { Link } from 'react-router-dom';
 const Container = styled.div`
   display: flex;
   justify-content: center;
+  align-items: center;
   width: 100%;
   height: 50px;
+  position: fixed;
+  bottom: 0;
 `;
 
 const NavigationItem = styled.button`
