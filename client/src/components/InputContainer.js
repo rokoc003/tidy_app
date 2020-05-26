@@ -5,7 +5,7 @@ const InputContainer = styled.div`
   flex-direction: column;
   margin: 10px 0px;
   flex-basis: 100%;
-  width: 80%;
+  max-width: 80%;
 `;
 
 export default InputContainer;

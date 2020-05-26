@@ -7,16 +7,20 @@ import colors from '../utils/colors';
 
 const DateContainer = styled(InputContainer)`
   display: flex;
-  justify-content: center;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 `;
 const DateCaption = styled(InputCaption)`
   color: ${colors.inputFont};
+  padding-right: 3em;
 `;
 
 const DateInput = styled(InputCircle)`
-  width: 40%;
-  font: 1.3rem;
-  padding-left: 15px;
+  max-width: 40%;
+  font: 1.1rem;
+  padding-left: 5px;
+  box-shadow: 8px 6px 10px 1px ${colors.boxShadow};
 `;
 
 function DateInputWithCaption() {
