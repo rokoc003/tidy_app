@@ -34,7 +34,8 @@ function Housework() {
       </InputContainer>
       <InputContainer>
         <TaskDescription
-          rows="6"
+          rows="8"
+          cols="27"
           value={description}
           onChange={(event) => setDescription(event.target.value)}
           type="text"

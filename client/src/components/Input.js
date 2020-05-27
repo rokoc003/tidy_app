@@ -5,7 +5,7 @@ const Input = styled.input`
   display: flex;
   justify-content: center;
   width: 100%;
-  margin: 5px 0px;
+  margin: 8px 0px;
   padding: 2px 8px;
   color: ${colors.inputFont};
   border: none;
