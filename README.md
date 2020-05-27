@@ -1,9 +1,12 @@
 # tidyApp 🧹
 
-tidyApp saves your relationship! It is the to do app for your household. It supports you in creating tasks and distributing them to all household members. You also get an overview of all tasks to be done in a day and week view. So there will never be an argument about who will do the next washing up.
+<a href="https://tidyapp-rokoc.herokuapp.com/" target="_blank"><img src="./client/src/assets/login.jpg" alt="tidyApp" style="float: right;" height="310" width="170" title="Click here for deployment" /></a>
 
-![login](clients/src/assets/screenshots/login.jpg)
-![household](clients/src/assets/screenshots/household.jpg)
+tidyApp saves your relationship! It is the to do app for your household.
+It supports you in creating tasks and distributing them to all household members.
+You also get an overview of all tasks to be done in a day and week view. So there will never be an argument about who will do the next washing up.
+
+<br/>
 
 # How to use?
 
