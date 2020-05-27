@@ -1,6 +1,6 @@
-# tidyApp 🧹
-
 <a href="https://tidyapp-rokoc.herokuapp.com/" target="_blank"><img src="./client/src/assets/login.jpg" alt="tidyApp" style="float: right;" height="310" width="170" title="Click here for deployment" /></a>
+
+# tidyApp 🧹
 
 tidyApp saves your relationship! It is the to do app for your household.
 It supports you in creating tasks and distributing them to all household members.
