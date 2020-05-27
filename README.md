@@ -27,7 +27,7 @@ If you would like to start the server and client in the development mode at the 
 npm run dev
 ```
 
-If you like to run the production build, you have to build the client first.
+If you would like to run the production build, you have to build the client first.
 
 ```
 npm run build
