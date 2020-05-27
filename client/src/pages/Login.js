@@ -12,6 +12,7 @@ import { Link } from 'react-router-dom';
 const IMG = styled.img`
   max-width: 350px;
   height: auto;
+  padding: 15px 0px;
 `;
 
 function Login() {
