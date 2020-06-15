@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from '@emotion/styled';
 import Cleaning from '../assets/images/Cleaning.png';
 import PageContainer from '../components/PageContainer';
@@ -7,6 +7,7 @@ import Button from '../components/Button';
 import ButtonContainer from '../components/ButtonContainer';
 import InputCircle from '../components/InputCircle';
 import InputContainer from '../components/InputContainer';
+import Form from '../components/Form';
 import { Link } from 'react-router-dom';
 
 const IMG = styled.img`
@@ -16,13 +17,31 @@ const IMG = styled.img`
 `;
 
 function Login() {
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
   return (
     <PageContainer>
       <IMG src={Cleaning} alt="Drawing of a woman vacuuming" />
       <Header />
       <InputContainer>
-        <InputCircle placeholder="Email" type="email" />
-        <InputCircle placeholder="Password" type="password" />
+        <Form>
+          <InputCircle
+            placeholder="Email"
+            type="email"
+            value={email}
+            onChange={(event) => {
+              setEmail(event.target.value);
+            }}
+          />
+          <InputCircle
+            placeholder="Password"
+            type="password"
+            value={password}
+            onChange={(event) => {
+              setPassword(event.target.value);
+            }}
+          />
+        </Form>
       </InputContainer>
       <span>New to tidyApp?</span>
       <span>
